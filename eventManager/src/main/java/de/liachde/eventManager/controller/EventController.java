@@ -19,12 +19,12 @@ public class EventController {
 
 	private final EventRepo repo;
 	
-	@GetMapping("/users")
-    public List<Event> getUsers() {
+	@GetMapping("/events")
+    public List<Event> getEvents() {
         return (List<Event>) repo.findAll();
     }
  
-    @PostMapping("/users")
+    @PostMapping("/events")
     void addUser(@RequestBody Event event) {
         repo.save(event);
     }
