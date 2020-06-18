@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>de.liachde</groupId>
-	<artifactId>eventManagerApi</artifactId>
+	<artifactId>eventManager</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>eventManagerApi</name>
 	<description>Event Manager API</description>
