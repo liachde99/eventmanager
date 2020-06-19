@@ -1,5 +1,6 @@
 package de.liachde.eventManager.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -21,7 +22,12 @@ public class EventController {
 	
 	@GetMapping("/events")
     public List<Event> getEvents() {
-        return (List<Event>) repo.findAll();
+		List<Event> eventlist = new ArrayList<>();
+		eventlist = repo.findAll();
+		for (Event event : eventlist) {
+			System.out.println(event.getName());
+		}
+        return eventlist;
     }
  
     @PostMapping("/events")
