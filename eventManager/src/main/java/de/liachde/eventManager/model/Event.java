@@ -20,7 +20,7 @@ public class Event {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "eventid",unique = true,nullable = false)
+	@Column(name = "id",unique = true,nullable = false)
 	private Long eventId;
 	
 	@Column(name = "name",nullable = false)
