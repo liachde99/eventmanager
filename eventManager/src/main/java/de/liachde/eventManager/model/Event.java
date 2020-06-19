@@ -9,12 +9,14 @@ import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "event")
 public class Event {
 
@@ -24,14 +26,14 @@ public class Event {
 	private Long eventId;
 	
 	@Column(name = "name",nullable = false)
-	private final String name;
+	private String name;
 	
 	@Column(name = "ort",nullable = false)
-	private final String ort;
+	private String ort;
 	
 	@Column(name = "beschreibung")
-	private final String beschreibung;
+	private String beschreibung;
 	
 	@Column(name = "open",nullable = false)
-	private final Boolean open;
+	private Boolean open;
 }
