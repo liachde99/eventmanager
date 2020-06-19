@@ -31,8 +31,7 @@ public class EventController {
     }
  
     @PostMapping("/events")
-    void addEvent(@RequestBody Event event) {
-    	System.out.println(event.getName() + " | " + event.getOrt() + " | " + event.getOpen().toString() + " | " + event.getBeschreibung());
-        repo.save(event);
+    public Event addEvent(@RequestBody Event event) {
+        return repo.save(event);
     }
 }
